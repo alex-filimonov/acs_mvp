@@ -4,7 +4,7 @@ function show_inform(cpe_id){
         url: 'cpe_inform_ajax?cpe_id='+cpe_id,             // указываем URL и
         success: function (data, textStatus) { // вешаем свой обработчик на функцию success
             $('#cpe_inform_body').text(data);
-            $('#cpeInform').modal("show")
+            $('#cpeInform').modal("show");
         }
     });
 }

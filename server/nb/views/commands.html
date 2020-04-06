@@ -1,37 +1,117 @@
 <div class="card" style="width: 28rem;">
-  <div class="card-body">
-    <h5 class="card-title">Устройство</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Серийный номер</h6>
-    <p class="card-text">{{cpe.serial_number}}</p>
-    <h6 class="card-subtitle mb-2 text-muted">Производитель</h6>
-    <p class="card-text">{{cpe.vendor_name}}</p>
-    <a href="./" class="card-link">Список устройств</a>
-  </div>
+    <div class="card-body">
+        <h5 class="card-title">Устройство</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Серийный номер</h6>
+        <p class="card-text">{{cpe.serial_number}}</p>
+        <h6 class="card-subtitle mb-2 text-muted">Производитель</h6>
+        <p class="card-text">{{cpe.vendor_name}}</p>
+        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
+            onclick="add_command_form({{cpe.id}})">Добавить команду</button>
+
+    </div>
 </div>
 
-<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="add_command({{cpe.id}})" >Добавить команду</button>
 
 <table class="table  table-hover">
     <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Команда</th>
-        <th scope="col">Параметры</th>
-        <th scope="col">Ответ</th>
-        <th scope="col">Состояние</th>
-        <th scope="col">Время исполнения</th>
-      </tr>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Команда</th>
+            <th scope="col">Параметры</th>
+            <th scope="col">Ответ</th>
+            <th scope="col">Состояние</th>
+            <th scope="col">Время исполнения</th>
+            <th scope="col"></th>
+        </tr>
     </thead>
 
     <tbody>
-          <tr>
-            <th scope="row"></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+        {% for command in commands %}
+        <tr>
+            <th scope="row">{{command.id}}</th>
+            <td>{{command.command_name}}</td>
+            <td>{{command.request}}</td>
+            <td>{{command.response}}</td>
+            <td>
+                {% if command.status_id==0 %}
+                    Ожидает выполнения
+                {% elif command.status_id==1 %}
+                    В работе
+                {% elif command.status_id==2 %}
+                    Завершено
+                {% elif command.status_id==3 %}
+                    Ошибка исполнения
+                {% elif command.status_id==4 %}
+                    Отменено
+                {% endif %}
+            </td>
+            <td>{{command.update_time}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="command_delete({{command.id}},{{cpe.id}})" >Удалить</button>
+            </td>
+        </tr>
+        {% endfor %}
     </tbody>
 </table>
-    
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="commandForm" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Inform Message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="./cpe_add_commands">
+                    <input type="hidden" name="cpe_id" value="{{cpe.id}}" />
+
+                    <div class="form-group">
+                        <label for="input_command">Команда</label>
+                        <select class="form-control" id="input_command" name="commands">
+                            {% for type_command in type_commands %}
+                                <option value="{{type_command.id}}">{{type_command.command_name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="input_parameter">Параметр команды</label>
+                        <textarea class="form-control" id="input_parameter" rows="10" name="parameter"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Записать</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="confirmDelete" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Удалить команду</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Удалить команду ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="command_delete_confirm()">Удалить</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="./static/javascript/command.js"></script>

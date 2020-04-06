@@ -31,9 +31,13 @@ def application(environ, start_response):
     else:
         controller_response=""
     
+    if routing.redirect!=None:
+        start_response('301 Moved Permanently', [('Location',routing.redirect)])
+        return [b""]
+
 
     start_response('200 OK', [('Content-Type', 'text/html')])
     layout_templater = open("../views/layout.html").read()
     templater=Template(layout_templater)
-    main_response=templater.render(controller_response=controller_response,env=environ)
+    main_response=templater.render(controller_response=controller_response,env="")
     return [main_response.encode()]

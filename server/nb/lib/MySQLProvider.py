@@ -31,14 +31,33 @@ class MySQLProvider():
         return ret 
 
     def getCommandsByCpeID(self,id):
-        sql = "Select id, request, response, status_id, create_time, update_time from commands where cpe_id=%s "
+        sql = """
+                Select c.id, c.request, c.response, c.status_id, c.create_time, c.update_time,t.command_name
+                from commands c
+                    left join commands_type t on (c.command=t.id)
+                where c.cpe_id=%s 
+                order by c.id desc
+                """
         cursor = self.connect.cursor()
         cursor.execute(sql,(id))
         ret=[]
         rows = cursor.fetchall()
         for row in rows:
-            ret.append({'id':row[0],'request':row[1],'response':row[2],'status_id':row[3],'create_time':row[4],'update_time':row[5]})
+            ret.append({'id':row[0],'request':row[1],'response':row[2],'status_id':row[3],'create_time':row[4],'update_time':row[5],'command_name':row[6]})
         return ret
+
+    def insertCPECommand(self,cpe_id,command_type,input_parametr):
+        sql = "insert into commands (cpe_id,command,request,status_id,create_time) values (%s,%s,%s,%s,%s)"
+#        sql = "insert into commands (cpe_id) values (%s)"
+        cursor = self.connect.cursor()
+        cursor.execute(sql, (str(cpe_id),str(command_type),input_parametr,str(0),None ))
+        self.connect.commit() 
+
+    def deleteCPECommands(self,id):
+        sql = "delete from  commands where id=%s"
+        cursor = self.connect.cursor()
+        cursor.execute(sql, (str(id)))
+        self.connect.commit() 
 
     def getCPEbySN(self,serial_number):
         sql = "Select id,serial_number,vendor_name,model_name,all_inform,first_inform,last_inform from cpe Where serial_number = %s "
@@ -61,6 +80,17 @@ class MySQLProvider():
         cursor = self.connect.cursor()
         cursor.execute(sql, (vendor_name,model_name,None,all_inform,id ) )
         self.connect.commit() 
+
+    def getCommandTypeList(self):
+        sql = "Select id,command_name from commands_type "
+        cursor = self.connect.cursor()
+        cursor.execute(sql)
+        ret=[]
+        rows = cursor.fetchall()
+        for row in rows:
+            ret.append({'id':row[0],'command_name':row[1]})
+        return ret
+
 
     
 
