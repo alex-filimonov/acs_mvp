@@ -1,6 +1,8 @@
 
 import lib.Init as Init
 from jinja2 import Template
+import lib.HTTPRequest as HTTPRequest
+
 
 class CPE():
     def __init__(self,environ):
@@ -17,6 +19,9 @@ class CPE():
 
 
     def ajax_cpe_inform(self):
+        http_request=HTTPRequest.HTTPRequest()
+        request_get=http_request.parse_uri(self.environ['REQUEST_URI'])
+
         init=Init.Init()
-        cpes=init.mysql.getCPEbyID(7)
+        cpes=init.mysql.getCPEbyID(request_get['cpe_id'])
         return cpes["all_inform"]
