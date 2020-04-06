@@ -22,6 +22,7 @@ class HTTPTransport():
 
         response = requests.request("POST", init.get_acs_url(), headers = headers, data = str_data)
         self.response_str=response.content
+#        print (self.response_str)
         if (len(self.response_str)>1):
             self.response_dict = xmltodict.parse(self.response_str)
         else:

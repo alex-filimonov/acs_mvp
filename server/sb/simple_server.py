@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #uwsgi --http 0.0.0.0:8080 --wsgi-file ./wsgi.py
-#uwsgi --http-socket 0.0.0.0:9100 --plugin python3 --wsgi-file ./symple_server.p
+#uwsgi --http-socket 0.0.0.0:9100 --plugin python3 --wsgi-file ./symple_server.py
 
 import sys
 import lib.Init as Init
@@ -20,6 +20,7 @@ def application(environ, start_response):
     request=None
 #    try:
     init.redis.connect(init.config['REDIS']['host'],init.config['REDIS']['port'])
+    init.mysql.connected(init.config['MYSQL']['host'],init.config['MYSQL']['port'],init.config['MYSQL']['database'],init.config['MYSQL']['user'],init.config['MYSQL']['password'])
 
     request=HTTPRequest.HTTPRequest(environ)
     route=Route.Route(request)

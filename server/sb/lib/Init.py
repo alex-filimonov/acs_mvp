@@ -2,6 +2,7 @@
 import configparser
 import logging
 import lib.RedisProvider as RedisProvider
+import lib.MySQLProvider as MySQLProvider
 
 
 
@@ -13,6 +14,7 @@ class Init(object):
             self.database=None
             self.mode="simple"
             self.redis=RedisProvider.RedisProvider()
+            self.mysql=MySQLProvider.MySQLProvider()
 
 
         def __str__(self):

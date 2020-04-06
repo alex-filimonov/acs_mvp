@@ -15,31 +15,33 @@ class Route():
     def run(self):
         init=Init.Init()
 
+        if (len(self.request.cwmp_methods)>0): # есть метод
+            if (self.request.cwmp_methods[0]=="cwmp:Inform"): # пришел inform обрабатываем его
+                inform=Inform.Inform(self.request)
+                inform.InformResponse()
+                self.body_response=inform.body_response
+                self.coockie_response=inform.coockie_response
+                return
+
+
         if 'session_id' in self.request.cookies_parse:
             # есть кук с сессией
             self.serial_number=init.redis.read(self.request.cookies_parse['session_id']+":serial_number")
             self.last_command=init.redis.read(self.request.cookies_parse['session_id']+":command")
 
-            init.redis.write(self.request.cookies_parse['session_id']+":serial_number",self.serial_number)
-            init.redis.write(self.request.cookies_parse['session_id']+":command","Empty")
 
             if (self.last_command==b"InformResponse"):
-                #считываем задания и отправляем их, пока пусто
-                print (self.request.request_body)
+                init.redis.write(self.request.cookies_parse['session_id']+":serial_number",self.serial_number)
+                init.redis.write(self.request.cookies_parse['session_id']+":command","Empty")
 
+               
 
-
+            # дефолтный ответ
             self.body_response=""
             self.coockie_response='session_id='+self.request.cookies_parse['session_id']
             return 
-        else:
-            if (len(self.request.cwmp_methods)>0): # есть метод
-                if (self.request.cwmp_methods[0]=="cwmp:Inform"):
-                    inform=Inform.Inform(self.request)
-                    inform.InformResponse()
-                    self.body_response=inform.body_response
-                    self.coockie_response=inform.coockie_response
-                    return
+        else: # сессии нет
+            pass 
 
         # в дефолте всем отлуп
         self.body_response=""
