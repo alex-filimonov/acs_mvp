@@ -1,0 +1,96 @@
+version: '3.3'
+services:
+
+  redis:
+    image: 'bitnami/redis:5.0'
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+#    ports:
+#      - '6370:6379'
+    volumes:
+      - 'redis_data:/bitnami/redis/data'
+    networks:
+      - acs_net
+
+  db:
+    image: db:latest
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123
+    networks:
+      - acs_net
+
+  nb:
+    image: nb:latest
+#    links:
+#      - db
+    depends_on:
+      - db
+    volumes:
+      - "../server/nb/controllers:/nb/controllers:rw"
+      - "../server/nb/lib:/nb/lib:rw"
+      - "../server/nb/log:/nb/log:rw"
+      - "../server/nb/static:/nb/static:rw"
+      - "../server/nb/views:/nb/views:rw"
+      - "../server/nb/webroot:/nb/webroot:rw"
+#    ports:
+#      - "9201:9201"
+    networks:
+      - acs_net
+
+  front_gui:
+    image: front_gui:latest
+    ports:
+      - "9200:9200"
+    networks:
+      - acs_net
+    depends_on:
+      - nb
+    volumes:
+      - "../server/nb/static:/nb/static:rw"
+
+
+  sb:
+    image: sb:latest
+    depends_on:
+      - db
+    volumes:
+      - "../server/sb/lib:/sb/lib:rw"
+      - "../server/sb/log:/sb/log:rw"
+      - "../server/sb/templaters:/sb/templaters:rw"
+      - "../server/sb/simple_server.py:/sb/simple_server.py"
+# штатно порты не должны быть на ружу
+#    ports:
+#      - "9100:9100"
+    networks:
+      - acs_net
+
+  backend_sb:
+    image: backend_sb:latest
+#штатно порты спрятаны
+    ports:
+      - "9110:9110"
+    networks:
+      - acs_net
+    depends_on:
+      - sb
+
+  front_sb:
+    image: front_sb:latest
+    depends_on:
+      - backend_sb
+    ports:
+      - "9120:9120"
+    networks:
+      - acs_net
+
+volumes:
+  redis_data:
+    driver: local
+
+
+networks:
+  acs_net:
+

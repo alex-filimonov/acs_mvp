@@ -1,0 +1,14 @@
+server {
+  listen 9200 default_server;
+  listen [::]:9200 default_server;
+
+  location /static {
+    alias /nb/static;
+  }
+
+  location / {
+    include uwsgi_params;
+    uwsgi_pass nb:9201;
+  }
+
+}

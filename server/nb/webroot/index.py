@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-#uwsgi --socket=127.0.0.1:9201 --plugin python3 --wsgi-file ./index.py
+#uwsgi --socket=0.0.0.0:9201 --plugin python3 --wsgi-file ./index.py --log-to /nb/log/uwsgi.log
 
 import sys
 sys.path.append('../')

@@ -1,0 +1,16 @@
+
+upstream backend  {
+  server backend_sb:9110;
+#  server backend_sb2:9110;
+#  server backend_sb3:9110;
+}
+
+server {
+  listen 9120 default_server;
+  listen [::]:9120 default_server;
+
+  location / {
+    proxy_pass  http://backend;
+  }
+
+}

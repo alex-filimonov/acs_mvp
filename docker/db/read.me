@@ -1,0 +1,4 @@
+docker run -d -p 3307:3306 --name mysql -e MYSQL_ROOT_PASSWORD=supersecret mysql
+
+docker exec -it mysql bash 
+root@c86ff80d7524:/# mysql -uacs -p

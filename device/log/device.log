@@ -910,3 +910,129 @@
 { level="DEBUG   ", time="[2020-04-06 10:01:00,480]", message="http://192.168.10.99:9100 "POST / HTTP/1.1" 200 None"}
 { level="DEBUG   ", time="[2020-04-06 10:01:00,483]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
 { level="DEBUG   ", time="[2020-04-06 10:01:00,485]", message="http://192.168.10.99:9100 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-07 15:39:42,165]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-07 15:39:42,173]", message="Starting new HTTP connection (1): cwmp.duckdns.org:80"}
+{ level="DEBUG   ", time="[2020-04-07 15:39:42,864]", message="http://cwmp.duckdns.org:80 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-07 15:39:42,867]", message="Starting new HTTP connection (1): cwmp.duckdns.org:80"}
+{ level="DEBUG   ", time="[2020-04-07 15:39:43,171]", message="http://cwmp.duckdns.org:80 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 11:32:10,334]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 11:32:10,341]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="INFO    ", time="[2020-04-08 11:57:52,938]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 11:57:52,945]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="INFO    ", time="[2020-04-08 12:00:12,778]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:00:12,785]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="INFO    ", time="[2020-04-08 12:14:22,428]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:14:22,435]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="INFO    ", time="[2020-04-08 12:19:27,326]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:19:27,333]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="DEBUG   ", time="[2020-04-08 12:19:27,358]", message="http://192.168.10.99:9100 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 12:19:27,361]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="DEBUG   ", time="[2020-04-08 12:19:27,366]", message="http://192.168.10.99:9100 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 12:21:27,594]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:21:27,600]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="DEBUG   ", time="[2020-04-08 12:21:27,693]", message="http://192.168.10.99:9100 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 12:21:27,695]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="DEBUG   ", time="[2020-04-08 12:21:27,701]", message="http://192.168.10.99:9100 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 12:22:18,576]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:22:18,582]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="DEBUG   ", time="[2020-04-08 12:22:18,594]", message="http://192.168.10.99:9100 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 12:22:18,595]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="DEBUG   ", time="[2020-04-08 12:22:18,601]", message="http://192.168.10.99:9100 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 12:23:50,001]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:23:50,007]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="INFO    ", time="[2020-04-08 12:24:02,080]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:24:02,087]", message="Starting new HTTP connection (1): 192.168.10.99:9100"}
+{ level="INFO    ", time="[2020-04-08 12:43:55,988]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:43:55,994]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 12:43:55,995]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 502 182"}
+{ level="INFO    ", time="[2020-04-08 12:44:07,912]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:44:07,919]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 12:44:07,920]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 502 182"}
+{ level="INFO    ", time="[2020-04-08 12:44:20,812]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:44:20,818]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 12:44:20,819]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 502 182"}
+{ level="INFO    ", time="[2020-04-08 12:46:44,481]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:46:44,487]", message="Starting new HTTPS connection (1): 192.168.10.99:9110"}
+{ level="INFO    ", time="[2020-04-08 12:46:51,064]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:46:51,071]", message="Starting new HTTPS connection (1): 192.168.10.99:9110"}
+{ level="INFO    ", time="[2020-04-08 12:46:55,945]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:46:55,951]", message="Starting new HTTPS connection (1): 192.168.10.99:9110"}
+{ level="INFO    ", time="[2020-04-08 12:49:18,744]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:49:18,750]", message="Starting new HTTPS connection (1): 192.168.10.99:9110"}
+{ level="INFO    ", time="[2020-04-08 12:49:22,365]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:49:22,371]", message="Starting new HTTPS connection (1): 192.168.10.99:9110"}
+{ level="INFO    ", time="[2020-04-08 12:49:29,973]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:49:29,980]", message="Starting new HTTPS connection (1): 192.168.10.99:9110"}
+{ level="INFO    ", time="[2020-04-08 12:49:33,782]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:49:33,789]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 12:49:33,809]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 12:49:33,812]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 12:49:33,816]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 12:49:35,782]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 12:49:35,788]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 12:49:35,799]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 12:49:35,800]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 12:49:35,806]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 13:01:50,158]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:01:50,165]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 13:01:50,187]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 13:01:50,189]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 13:01:50,195]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 13:12:41,367]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:12:41,373]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 13:12:41,379]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 502 182"}
+{ level="INFO    ", time="[2020-04-08 13:12:46,110]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:12:46,117]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 13:12:46,209]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 13:12:46,212]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 13:12:46,218]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 13:12:49,880]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:12:49,887]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="INFO    ", time="[2020-04-08 13:12:53,685]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:12:53,692]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="INFO    ", time="[2020-04-08 13:12:58,941]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:12:58,948]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="INFO    ", time="[2020-04-08 13:13:57,713]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:13:57,719]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="INFO    ", time="[2020-04-08 13:13:59,523]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:13:59,529]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="INFO    ", time="[2020-04-08 13:14:00,595]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:14:00,601]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="INFO    ", time="[2020-04-08 13:14:02,765]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:14:02,771]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 13:14:02,789]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 13:14:02,791]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 13:14:02,797]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 13:14:05,102]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:14:05,108]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="INFO    ", time="[2020-04-08 13:15:24,715]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:15:24,722]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="INFO    ", time="[2020-04-08 13:17:13,142]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:17:13,149]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="INFO    ", time="[2020-04-08 13:17:15,804]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:17:15,811]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 13:17:15,837]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 13:17:15,840]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 13:17:15,846]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 13:17:17,924]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:17:17,931]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="INFO    ", time="[2020-04-08 13:18:56,932]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:18:56,939]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="DEBUG   ", time="[2020-04-08 13:18:56,964]", message="http://192.168.10.99:9120 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 13:18:56,967]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="DEBUG   ", time="[2020-04-08 13:18:56,972]", message="http://192.168.10.99:9120 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 13:18:58,765]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:18:58,772]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="DEBUG   ", time="[2020-04-08 13:18:58,784]", message="http://192.168.10.99:9120 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 13:18:58,787]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="DEBUG   ", time="[2020-04-08 13:18:58,790]", message="http://192.168.10.99:9120 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 13:19:00,316]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:19:00,323]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 13:19:00,334]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 13:19:00,337]", message="Starting new HTTP connection (1): 192.168.10.99:9110"}
+{ level="DEBUG   ", time="[2020-04-08 13:19:00,342]", message="http://192.168.10.99:9110 "POST / HTTP/1.1" 200 None"}
+{ level="INFO    ", time="[2020-04-08 13:19:07,810]", message="Logging is init....."}
+{ level="DEBUG   ", time="[2020-04-08 13:19:07,817]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="DEBUG   ", time="[2020-04-08 13:19:07,829]", message="http://192.168.10.99:9120 "POST / HTTP/1.1" 200 None"}
+{ level="DEBUG   ", time="[2020-04-08 13:19:07,832]", message="Starting new HTTP connection (1): 192.168.10.99:9120"}
+{ level="DEBUG   ", time="[2020-04-08 13:19:07,839]", message="http://192.168.10.99:9120 "POST / HTTP/1.1" 200 None"}
